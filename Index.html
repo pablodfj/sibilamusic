@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sibila</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Caroline';
+            src: url('Caroline.otf') format('truetype');
+        }
+
+        body {
+            background-image: url('./fondo6.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-color: #000000; /* Añade esta línea */
+            width: 100%;
+            height: auto
+        }
+
+        .navbar, .dropdown-menu {
+            background-color: #383021 !important; /* Cambia el color a blanco hueso anaranjado */
+        }
+
+        .navbar-brand {
+            font-family: 'Caroline';
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Caroline';
+            font-size: 18px;
+            margin-right: 15px; /* Añade espacio a la derecha de cada enlace de navegación */
+        }
+
+            .navbar-nav .nav-link:hover {
+                background-color: #4f4431;
+                border-radius: 5px;
+            }
+
+        .navbar-nav .active .nav-link {
+            background-color: #5f5431;
+            border-radius: 5px;
+        }
+
+        .custom-text {
+            color: #ffedcd;
+            font-family: 'Caroline';
+            font-size: 24px; /* default font size for larger screens */
+            width: 700px;
+            border: none;
+            padding: 10px;
+            margin-top: 400px; /* Ajusta el margen superior en relación a la altura de la ventana */
+            margin-left: 40vw; /* Ajusta el margen izquierdo en relación al ancho de la ventana */
+            background: rgba(0, 0, 0, 0.5); /* Añade esta línea */
+            border-radius: 25px; /* Añade esta línea */
+        }
+
+        @media screen and (max-width: 1140px) {
+            .custom-text {
+                width: 600px;
+                margin-top: 400px;
+                margin-left: 10vw;
+                font-size: 20px;
+            }
+            body {
+                background-size: 120%;
+            }
+        }
+                /* When the viewport is 600px or less, decrease the font size */
+                @media screen and (max-width: 740px) {
+                    .custom-text {
+                        font-size: 17px;
+                        width: 90vw;
+                        margin-top: 80vw;
+                        margin-left: 5vw;
+                    }
+                    body {
+                        background-size: 200%;
+                      
+                    }
+                }
+        audio {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+
+    <!-- JS de Bootstrap (necesita jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <a class="navbar-brand" href="#">Sibila</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#Sobre nosotros">Sobre nosotros <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Dossier y rider/Dossier.html">Dossier y rider</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Fotos/Fotos.html">Fotos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Conciertos/Conciertos.html">Conciertos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contacto/Contacto.html">Contacto y redes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <audio src="song.mp3" controls loop>
+        <p>Tu navegador no soporta el elemento audio </p>
+    </audio>
+
+    <div class="custom-text">
+        <h2><b>Sibila</b></h2>
+        <p>Es un proyecto musical que nos traslada a diferentes culturas a través de canciones tradicionales y originales. En este viaje alrededor del mundo Sibila recorre lugares como Grecia, África, países nórdicos, India y Latinoamérica, pasando desde canciones introspectivas que invitan a la meditación hasta otras animadas que incitan a bailar.</p>
+        <br>
+
+        <h3><b>Integrantes</b></h3>
+        <br>
+
+        <h4><b>Laura Salgado</b></h4>
+        <p>Cantante principal, guitarrista y percusionista. Es una artista multidisciplinar que comprende la danza, el patinaje y la música. Comienza su recorrido musical gracias a su pasión por la música brasileña y pronto se ve interesada por descubrir la música tradicional de otros lugares.</p>
+        <br>
+
+        <h4><b>Pablo Del Fresno</b></h4>
+        <p>Guitarrista, corista y percusionista. Comienza su camino en la música desde muy pequeño con grupos de rock, funk y jazz fusión. Actualmente está inmerso en proyectos de música étnica. Como Sanke (música africana), Zaroj (Bal-folk), Astrumm (música ecléctica).</p>
+    </div>
+</body>
+</html>
