@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sibila</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Caroline';
+            src: url('../Caroline.otf') format('truetype');
+        }
+
+        body {
+            background-image: url('./Fondo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #000000; /* Añade esta línea */
+        }
+
+        .navbar, .dropdown-menu {
+            background-color: #383021 !important; /* Cambia el color a blanco hueso anaranjado */
+        }
+
+        .navbar-brand {
+            font-family: 'Caroline';
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Caroline';
+            font-size: 18px;
+            margin-right: 15px; /* Añade espacio a la derecha de cada enlace de navegación */
+        }
+
+            .navbar-nav .nav-link:hover {
+                background-color: #4f4431;
+                border-radius: 5px;
+            }
+
+        .navbar-nav .active .nav-link {
+            background-color: #5f5431;
+            border-radius: 5px;
+        }
+
+        .thumbnail-dossier {
+            width: 25vw; /* El tamaño de la miniatura es ahora el triple */
+            margin-left: 10vw;
+            vertical-align: middle;
+        }
+
+        .thumbnail-rider {
+            width: 35vw; /* El tamaño de la miniatura es ahora el triple */
+            margin-left: 15vw;
+            vertical-align: middle;
+        }
+
+        .center {
+            display: flex;
+            align-items: center; /* Centra los elementos hijos en el eje vertical */
+            justify-content: flex-start;
+            width: 100%;
+            height: 100vh; /* Hace que el contenedor ocupe todo el alto de la ventana */
+            margin: auto;
+        }
+
+        @media (max-width: 1000px) {
+            .thumbnail-dossier {
+                width: 35vw; /* El tamaño de la miniatura es ahora el triple */
+                margin-left: 7vw;
+                vertical-align: middle;
+            }
+
+            .thumbnail-rider {
+                width: 45vw; /* El tamaño de la miniatura es ahora el triple */
+                margin-left: 7vw;
+                vertical-align: middle;
+            }
+        }
+            @media (max-width: 800px) {
+                .center {
+                    flex-direction: column; /* Cambia la dirección de los elementos hijos a vertical */
+                }
+
+                .thumbnail-dossier {
+                    width: 50vw;
+                    margin-bottom: 20px; /* Añade espacio debajo de cada imagen */
+                    margin-top: 50px
+                }
+
+                .thumbnail-rider {
+                    width: 70vw;
+                    margin-left: 0px;
+                    margin-bottom: 20px; /* Añade espacio debajo de cada imagen */
+                    margin-top: 50px
+                }
+            }
+    </style>
+
+    <!-- JS de Bootstrap (necesita jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <a class="navbar-brand" href="#">Sibila</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Index.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Dossier y rider/Dossier.html">Dossier y rider <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Fotos/Fotos.html">Fotos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Conciertos/Conciertos.html">Conciertos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Contacto/Contacto.html">Contacto y redes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="center">
+        <a href="./Sibila-Dossier.pdf" target="_blank">
+            <img class="thumbnail-dossier" src="./Dossier-thumbnail.jpg" alt="Dossier Thumbnail">
+        </a>
+
+        <a href="./Sibila-Rider.pdf" target="_blank">
+            <img class="thumbnail-rider" src="./rider-thumbnail2.jpg" alt="Rider Thumbnail">
+        </a>
+    </div>
+
+</body>
+</html>

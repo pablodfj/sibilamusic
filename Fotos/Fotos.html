@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sibila</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Caroline';
+            src: url('../Caroline.otf') format('truetype');
+        }
+
+        body {
+            background-image: url('./Fondo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .navbar, .dropdown-menu {
+            background-color: #383021 !important;
+        }
+
+        .navbar-brand {
+            font-family: 'Caroline';
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Caroline';
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+            .navbar-nav .nav-link:hover {
+                background-color: #4f4431;
+                border-radius: 5px;
+            }
+
+        .navbar-nav .active .nav-link {
+            background-color: #5f5431;
+            border-radius: 5px;
+        }
+
+        /* Photo gallery styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .thumbnail {
+            width: 30%;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+            .thumbnail img {
+                width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+                height: auto; /* Mantiene la relación de aspecto de la imagen */
+                object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible */
+                margin: 10px;
+            }
+
+        /* Media query para dispositivos con una anchura máxima de 600px (típicamente smartphones) */
+        @media screen and (max-width: 600px) {
+            .thumbnail {
+                /* Aquí puedes ajustar el tamaño de las miniaturas para smartphones */
+                width: 90%;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        /* Fullscreen photo modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 70%;
+            max-height: auto;
+        }
+
+            .modal-content img {
+                margin: 0; /* Elimina cualquier margen en la imagen */
+                padding: 0; /* Elimina cualquier padding en la imagen */
+            }
+
+
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: calc(20% - 10vw);
+        }
+
+        .next {
+            right: calc(20% - 10vw);
+        }
+
+        @media screen and (max-width: 600px) {
+            .modal-content {
+                max-width: 90%;
+                max-height: 90%;
+            }
+
+            .prev {
+                left: 5px;
+            }
+
+            .next {
+                right: 5px;
+            }
+        }
+    </style>
+
+    <!-- JS de Bootstrap (necesita jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <a class="navbar-brand" href="#">Sibila</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Index.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Dossier y rider/Dossier.html">Dossier y rider</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Fotos/Fotos.html">Fotos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Conciertos/Conciertos.html">Conciertos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Contacto/Contacto.html">Contacto y redes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Photo gallery -->
+    <div class="gallery">
+        <div class="thumbnail" onclick="openModal('./Photo1.jpg')">
+            <img src="./Photo1-thumbnail.jpg" alt="Photo 1">
+        </div>
+        <!-- Add more thumbnails here -->
+        <div class="thumbnail" onclick="openModal('./Photo2.jpg')">
+            <img src="./Photo2-thumbnail.jpg" alt="Photo 2">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo3.jpg')">
+            <img src="./Photo3-thumbnail.jpg" alt="Photo 3">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo4.jpg')">
+            <img src="./Photo4-thumbnail.jpg" alt="Photo 4">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo5.jpg')">
+            <img src="./Photo5-thumbnail.jpg" alt="Photo 5">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo6.jpg')">
+            <img src="./Photo6-thumbnail.jpg" alt="Photo 6">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo7.jpg')">
+            <img src="./Photo7-thumbnail.jpg" alt="Photo 7">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo8.jpg')">
+            <img src="./Photo8-thumbnail.jpg" alt="Photo 8">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo9.jpg')">
+            <img src="./Photo9-thumbnail.jpg" alt="Photo 9">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo10.jpg')">
+            <img src="./Photo10-thumbnail.jpg" alt="Photo 10">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo11.jpg')">
+            <img src="./Photo11-thumbnail.jpg" alt="Photo 11">
+        </div>
+        <div class="thumbnail" onclick="openModal('./Photo12.jpg')">
+            <img src="./Photo12-thumbnail.jpg" alt="Photo 12">
+        </div>
+        <!-- Fullscreen photo modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">×</span>
+            <div class="modal-content">
+                <img id="modalImage" src="" alt="Fullscreen Photo">
+            </div>
+            <span class="prev" onclick="changePhoto(-1)">←</span>
+            <span class="next" onclick="changePhoto(1)">→</span>
+        </div>
+    </div>
+
+    <script>
+        // Array de fotos
+        var photos = ['./Photo1.jpg', './Photo2.jpg', './Photo3.jpg', './Photo4.jpg', './Photo5.jpg', './Photo6.jpg', './Photo7.jpg', './Photo8.jpg', './Photo9.jpg', './Photo10.jpg', './Photo11.jpg', './Photo12.jpg'];
+        var currentPhotoIndex = 0;
+
+        // Abre el modal con la foto a pantalla completa
+        function openModal(photoSrc) {
+            currentPhotoIndex = photos.indexOf(photoSrc);
+            document.getElementById('modalImage').src = photoSrc;
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        // Cierra el modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // Cambia la foto en el modal
+        function changePhoto(direction) {
+            currentPhotoIndex = (currentPhotoIndex + direction + photos.length) % photos.length;
+            document.getElementById('modalImage').src = photos[currentPhotoIndex];
+        }
+    </script>
+</body>
+</html>
