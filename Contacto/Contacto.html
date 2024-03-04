@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sibila</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Caroline';
+            src: url('../Caroline.otf') format('truetype');
+        }
+
+        body {
+            background-image: url('./fondo6.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #000000; /* Añade esta línea */
+        }
+
+        .navbar, .dropdown-menu {
+            background-color: #383021 !important; /* Cambia el color a blanco hueso anaranjado */
+        }
+
+        .navbar-brand {
+            font-family: 'Caroline';
+            font-size: 24px;
+        }
+
+        .navbar-nav .nav-link {
+            font-family: 'Caroline';
+            font-size: 18px;
+            margin-right: 15px; /* Añade espacio a la derecha de cada enlace de navegación */
+        }
+
+            .navbar-nav .nav-link:hover {
+                background-color: #4f4431;
+                border-radius: 5px;
+            }
+
+        .navbar-nav .active .nav-link {
+            background-color: #5f5431;
+            border-radius: 5px;
+        }
+
+        input[type=text] {
+            width: 300px; /* Hace que los campos de entrada sean más largos */
+        }
+
+        textarea {
+            width: 300px; /* Hace que el campo de comentario sea más largo */
+        }
+
+        img {
+            width: 40px; /* Hace que las imágenes PNG tengan un ancho de 30px */
+            margin-top: 30px; /* Mueve las imágenes un poco más abajo */
+            margin-left: 42vw; /* Mueve las imágenes un poco más a la derecha */
+        }
+
+        a {
+            color: #F5DEB3; /* Cambia el color de los hipervínculos a blanco hueso */
+        }
+
+        form {
+            position: relative;
+            left: 5vw; /* Adjust this value to move the form to the right */
+            top: 470px; /* Adjust this value to move the form down */
+
+        }
+        input[type=submit] {
+            margin-bottom: 10px; /* Añade un margen inferior de 20px al botón de envío */
+        }
+        @media (max-width: 1000px) {
+            img {
+                margin-top: 20px; /* Margen superior de 20px */
+                margin-left: 10vw; /* Margen izquierdo de 20px */
+            }
+
+            form {
+                position: relative;
+                left: 10vw; /* Margen izquierdo de 20px */
+                top: 700px; /* Margen superior de 20px */
+            }
+        }
+        @media (max-width: 400px) {
+            body {
+                background-size: 30%; /* Ajusta este valor según tus necesidades */
+            }
+        }
+
+
+
+    </style>
+
+
+    <!-- JS de Bootstrap (necesita jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <a class="navbar-brand" href="#">Sibila</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Index.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Dossier y rider/Dossier.html">Dossier y rider</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Fotos/Fotos.html">Fotos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Conciertos/Conciertos.html">Conciertos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Contacto/Contacto.html">Contacto y redes <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <form action="mailto:sibila.worldmusic@gmail.com" method="post" enctype="text/plain" style="width: 300px;">
+        Nombre:<br>
+        <input type="text" name="name" placeholder="Introduce tu nombre aquí"><br>
+        E-mail:<br>
+        <input type="text" name="mail" placeholder="Introduce tu correo electrónico aquí"><br>
+        Comentario:<br>
+        <textarea name="comment" rows="8" cols="50" placeholder="Introduce tu comentario aquí"></textarea><br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Resetear">
+    </form>
+
+    <div>
+        <img src="./instagram.png" alt="Instagram">
+        <a href="https://www.instagram.com/sibila_music?igsh=czVhMXNvMG14YWoy" target="_blank">@sibila_music</a>
+    </div>
+    <div>
+        <img src="./Facebook.png" alt="Facebook">
+        <a href="https://www.facebook.com/people/Sibila/100092990682582/"target="_blank">https://www.facebook.com/people/Sibila/</a>
+    </div>
+    <div>
+        <img src="./gmail.png" alt="Gmail">
+        <a href="mailto:sibila.worldmusic@gmail.com">sibila.worldmusic@gmail.com</a>
+    </div>
+    <div>
+        <img src="./phone.png" alt="Phone">
+        <a href="tel:+34676351681">+34 676 35 16 81</a> o <a href="tel:+34690766586">+34 690 76 65 86</a>
+    </div>
+    <div>
+        <img src="./spotify.png" alt="Spotify">
+        <a href="https://open.spotify.com/artist/32oM4BbE1zXFs0wZV6O0ZT?si=w357orfkQpSb-L6l6VMiIA"target="_blank">Sibila</a>
+    </div>
+
+</body>
+</html>
