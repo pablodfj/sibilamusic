@@ -59,36 +59,43 @@
             border-radius: 25px; /* Añade esta línea */
         }
 
-        @media screen and (max-width: 1140px) {
+          @media screen and (max-width: 1140px) {
+        .custom-text {
+            width: 600px;
+            margin-top: 400px;
+            margin-left: 10vw;
+            font-size: 20px;
+        }
+
+        body {
+            background-size: 120%;
+        }
+    }
+    @media screen and (max-width: 750px) {
+        body {
+            background-size: 180%;
+        }
+    }
+        /* When the viewport is 600px or less, decrease the font size */
+        @media screen and (max-width: 600px) {
             .custom-text {
-                width: 600px;
-                margin-top: 400px;
-                margin-left: 10vw;
-                font-size: 20px;
+                font-size: 17px;
+                width: 90vw;
+                margin-top: 100vw;
+                margin-left: 5vw;
             }
+
             body {
-                background-size: 120%;
+                background-size: 240%;
             }
         }
-                /* When the viewport is 600px or less, decrease the font size */
-                @media screen and (max-width: 600px) {
-                    .custom-text {
-                        font-size: 17px;
-                        width: 90vw;
-                        margin-top: 100vw;
-                        margin-left: 5vw;
-                    }
-                    body {
-                        background-size: 240%;
-                      
-                    }
-                }
+
         audio {
             position: fixed;
             bottom: 0;
             left: 0;
         }
-    </style>
+</style>
 
     <!-- JS de Bootstrap (necesita jQuery) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
