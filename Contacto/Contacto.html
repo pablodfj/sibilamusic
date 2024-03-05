@@ -55,47 +55,67 @@
         img {
             width: 40px; /* Hace que las imágenes PNG tengan un ancho de 30px */
             margin-top: 30px; /* Mueve las imágenes un poco más abajo */
-            margin-left: 42vw; /* Mueve las imágenes un poco más a la derecha */
+             /* Mueve las imágenes un poco más a la derecha */
         }
+
+        .bloque-imagenes {
+            /* Ajusta estos valores según tus necesidades */
+            position: relative; /* Puedes cambiarlo a 'absolute' si lo necesitas */
+            top: 30vw; /* Distancia desde la parte superior de la página */
+            left: 3vw; /* Distancia desde el lado izquierdo de la página */
+        }
+
 
         a {
             color: #F5DEB3; /* Cambia el color de los hipervínculos a blanco hueso */
         }
 
-        form {
-            position: relative;
-            left: 5vw; /* Adjust this value to move the form to the right */
-            top: 470px; /* Adjust this value to move the form down */
+        iframe {
+            margin-top: 0vw;
+            margin-left: 40vw;
+        }
 
-        }
-        input[type=submit] {
-            margin-bottom: 10px; /* Añade un margen inferior de 20px al botón de envío */
-        }
         @media (max-width: 1000px) {
-            img {
-                margin-top: 20px; /* Margen superior de 20px */
-                margin-left: 10vw; /* Margen izquierdo de 20px */
+            body {
+                background-size: 140%;
+            }
+            iframe {
+                margin-top: 46vw;
+                margin-left: 3vw;
+            }
+            .bloque-imagenes {
+                /* Ajusta estos valores según tus necesidades */
+                position: relative; /* Puedes cambiarlo a 'absolute' si lo necesitas */
+                top: 40vw; /* Distancia desde la parte superior de la página */
+                left: 3vw; /* Distancia desde el lado izquierdo de la página */
             }
 
-            form {
-                position: relative;
-                left: 10vw; /* Margen izquierdo de 20px */
-                top: 700px; /* Margen superior de 20px */
+        }
+
+        @media screen and (max-width: 750px) {
+            body {
+                background-size: 170%;
+            }
+            .bloque-imagenes {
+              
+                top: 50vw; /* Distancia desde la parte superior de la página */
+                left: 3vw; /* Distancia desde el lado izquierdo de la página */
+            }
+            iframe {
+                margin-top: 55vw;
+                margin-left: 3vw;
             }
         }
-        @media screen and (max-width: 750px) {
-        body {
-            background-size: 155%;
-        }
-    }
+
         @media (max-width: 600px) {
             body {
                 background-size: 240%; /* Ajusta este valor según tus necesidades */
             }
+            iframe {
+                margin-top: 60vw;
+                margin-left: 3vw;
+            }
         }
-
-
-
     </style>
 
 
@@ -132,37 +152,33 @@
         </div>
     </nav>
 
-    <form action="mailto:sibila.worldmusic@gmail.com" method="post" enctype="text/plain" style="width: 300px;">
-        Nombre:<br>
-        <input type="text" name="name" placeholder="Introduce tu nombre aquí"><br>
-        E-mail:<br>
-        <input type="text" name="mail" placeholder="Introduce tu correo electrónico aquí"><br>
-        Comentario:<br>
-        <textarea name="comment" rows="8" cols="50" placeholder="Introduce tu comentario aquí"></textarea><br><br>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Resetear">
-    </form>
+    <div class="bloque-imagenes" style="width: 400px;">
+        <!-- Aquí van tus imágenes -->
 
-    <div>
-        <img src="./instagram.png" alt="Instagram">
-        <a href="https://www.instagram.com/sibila_music?igsh=czVhMXNvMG14YWoy" target="_blank">@sibila_music</a>
+        <div>
+            <img src="./spotify.png" alt="Spotify">
+            <a href="https://open.spotify.com/artist/32oM4BbE1zXFs0wZV6O0ZT?si=w357orfkQpSb-L6l6VMiIA" target="_blank">Sibila</a>
+        </div>
+        <div>
+            <img src="./instagram.png" alt="Instagram">
+            <a href="https://www.instagram.com/sibila_music?igsh=czVhMXNvMG14YWoy" target="_blank">@sibila_music</a>
+        </div>
+        <div>
+            <img src="./Facebook.png" alt="Facebook">
+            <a href="https://www.facebook.com/people/Sibila/100092990682582/" target="_blank">www.facebook.com/people/Sibila/</a>
+        </div>
+        <div>
+            <img src="./gmail.png" alt="Gmail">
+            <a href="mailto:sibila.worldmusic@gmail.com">sibila.worldmusic@gmail.com</a>
+        </div>
+        <div>
+            <img src="./phone.png" alt="Phone">
+            <a href="tel:+34676351681">+34 676 35 16 81</a> o <a href="tel:+34690766586">+34 690 76 65 86</a>
+        </div>
+
     </div>
-    <div>
-        <img src="./Facebook.png" alt="Facebook">
-        <a href="https://www.facebook.com/people/Sibila/100092990682582/"target="_blank">www.facebook.com/people/Sibila/</a>
-    </div>
-    <div>
-        <img src="./gmail.png" alt="Gmail">
-        <a href="mailto:sibila.worldmusic@gmail.com">sibila.worldmusic@gmail.com</a>
-    </div>
-    <div>
-        <img src="./phone.png" alt="Phone">
-        <a href="tel:+34676351681">+34 676 35 16 81</a> o <a href="tel:+34690766586">+34 690 76 65 86</a>
-    </div>
-    <div>
-        <img src="./spotify.png" alt="Spotify">
-        <a href="https://open.spotify.com/artist/32oM4BbE1zXFs0wZV6O0ZT?si=w357orfkQpSb-L6l6VMiIA"target="_blank">Sibila</a>
-    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdjp50S81jJ9H8oJ8DTZFvFYquiiLKP1xYT2aiWQ1UHT50-iw/viewform?embedded=true" width="450" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
 
 </body>
 </html>
