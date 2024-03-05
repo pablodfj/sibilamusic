@@ -15,7 +15,7 @@
         body {
             background-image: url('./Fondo6.jpg');
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100%;
             background-color: #000000; /* Añade esta línea */
         }
 
@@ -83,6 +83,11 @@
                 top: 700px; /* Margen superior de 20px */
             }
         }
+        @media screen and (max-width: 750px) {
+        body {
+            background-size: 155%;
+        }
+    }
         @media (max-width: 600px) {
             body {
                 background-size: 240%; /* Ajusta este valor según tus necesidades */
